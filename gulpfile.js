@@ -2,7 +2,8 @@ var gulp = require("gulp");
 var shell = require("gulp-shell");
 
 gulp.task("default", shell.task([
-    "pdflatex problem_1.tex"
+    "bash pdf_all.sh",
+    "rm *.aux *.log"
 ]));
 
 gulp.watch("*.tex", ["default"]);
